@@ -16,7 +16,6 @@ app.use(express.json());
 app.use("/api", authRoutes);
 
 
-
 app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+  console.log(`Server started on`)
 );
