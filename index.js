@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     res.send('SERVER ON')
 })
 
-app.use("/api", authRoutes);
+// app.use("/api", authRoutes);
 
 // Page Error
 app.get("*", (req, res) => {
