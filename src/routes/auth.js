@@ -3,6 +3,9 @@ const {   signUpUser, loginUser, logOutUser, updateAvatarUser, updateUserName, s
 
 const router = require("express").Router();
 
+router.get("/" ,"/", (req, res) => {
+    res.send('API')
+} )
 router.post("/signup", signUpUser);
 router.post("/login", loginUser);
 router.post("/logout", logOutUser);
