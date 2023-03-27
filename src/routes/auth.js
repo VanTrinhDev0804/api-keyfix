@@ -18,7 +18,7 @@ router.post("/sendOTP", UserController.sendOTPVerify);
 router.post("/verifyOTP", UserController.VerifyOTP);
 
 //  keyer handel
-router.post("/loginkeyer", loginKeyer);
+router.post("/loginkeyer", UserController.loginKeyer);
 
 
 module.exports = router;
