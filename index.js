@@ -1,24 +1,22 @@
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require('body-parser')
+const authRoutes = require("./src/routes/auth");
+const app = express();
+require("dotenv").config();
 
-const path = require('path')
-const express = require("express")
-require('dotenv').config()
-const app = express()
-const cors = require("cors")
-const port = process.env.PORT || 5000
-
-// Page Home
-app.get("/", (req, res) => {
-    res.send('SERVER ON')
-})
-const authRoutes = require("./src/routes/auth")
-app.use("/api", cors({ origin: '*' }), authRoutes)
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 
-// Page Error
-app.get("*", (req, res) => {
-    res.send("Nhập Sai Đường Dẫn! Vui Lòng Nhập Lại >.<")
-});
+app.use(cors());
+app.use(express.json());
 
-app.listen(port, () => {
-  console.log(`Start server listen at http://localhost:${port}`)
-});
+
+app.use("/api", authRoutes);
+
+
+
+app.listen(process.env.PORT, () =>
+  console.log(`Server started on ${process.env.PORT}`)
+);
