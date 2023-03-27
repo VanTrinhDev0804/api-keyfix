@@ -1,7 +1,10 @@
 
+const express = require("express")
+const router = express.Router()
+
 const {   signUpUser, loginUser, logOutUser, updateAvatarUser, updateUserName, sendOTPVerify, VerifyOTP, loginKeyer } = require('../controllers/userController');
 
-const router = require("express").Router();
+
 
 router.get("/", (req, res) => {
     res.send('API')
