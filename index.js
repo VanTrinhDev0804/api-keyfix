@@ -5,7 +5,7 @@ require('dotenv').config()
 const app = express()
 const cors = require("cors")
 const port = process.env.PORT || 5000
-const authRoutes = require("./routes/auth");
+const authRoutes = require("./src/routes/auth");
 // Page Home
 app.get("/", (req, res) => {
     res.send('SERVER ON')

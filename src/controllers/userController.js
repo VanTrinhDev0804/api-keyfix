@@ -1,4 +1,4 @@
-const { db } = require("../db");
+const { db } = require("../../db");
 const User = require("../models/user");
 const config = require("../utils/config");
 
@@ -12,7 +12,7 @@ const {
 const app = initializeApp(config);
 const auth = getAuth(app);
 
-const { validateSignUpData, validateLoginData } = require("../validators");
+const { validateSignUpData, validateLoginData } = require("../../validators");
 const { json } = require("body-parser");
 const { response, request } = require("express");
 const client = require("../utils/configtwilio");

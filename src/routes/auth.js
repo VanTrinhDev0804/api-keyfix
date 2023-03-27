@@ -10,6 +10,7 @@ router.post("/updateavatar", updateAvatarUser);
 router.post("/updatename", updateUserName);
 router.post("/sendOTP", sendOTPVerify);
 router.post("/verifyOTP", VerifyOTP);
+
 //  keyer handel
 router.post("/loginkeyer", loginKeyer);
 
