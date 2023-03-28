@@ -12,6 +12,7 @@ app.use(bodyParser.json())
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res)=> {res.json({"SERVER ON"})})
 
 app.use("/api", authRoutes);
 
